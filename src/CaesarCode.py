@@ -26,6 +26,7 @@ def Decryption(ciphertext, key_val):
             continue
         new_special = special.lower() #converts special to lowercase 
         plaintext += chr((ord(new_special) - key_val - 97) % 26 + 97).upper() if special.isupper() else chr((ord(new_special) - key_val - 97) % 26 + 97) 
-        #calculates the new character's ASCII value 
+        #calculates the new character's ASCII value using formula C = (P + K) % 26
+        #If original character was uppercase the decrypted character is converted to uppercase
 
     return plaintext
