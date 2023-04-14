@@ -16,7 +16,7 @@ def Encryption(plaintext,key_val):
     return ciphertext
 
 
-#Decrypting Ciphertext
+#Decryption of a ciphertext
 def Decryption(ciphertext, key_val):
     plaintext = '' #initializes an empty string which will hold the decrypted message
     for i in range(len(ciphertext)): #iterates through each character in the ciphertext string
@@ -26,7 +26,7 @@ def Decryption(ciphertext, key_val):
             continue
         new_special = special.lower() #converts special to lowercase 
         plaintext += chr((ord(new_special) - key_val - 97) % 26 + 97).upper() if special.isupper() else chr((ord(new_special) - key_val - 97) % 26 + 97) 
-        #calculates the new character's ASCII value using formula C = (P + K) % 26
+        #Calculates the new character's ASCII value using formula C = (P + K) % 26
         #If original character was uppercase the decrypted character is converted to uppercase
 
     return plaintext
