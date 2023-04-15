@@ -30,3 +30,22 @@ def Decryption(ciphertext, key_val):
         #If original character was uppercase the decrypted character is converted to uppercase
 
     return plaintext
+
+ while True:
+    print(
+        'Welcome \n [] Press 0 for Encryption \n [] Press 1 for Decryption \n [*] Press 2 to exit.. ')
+    print('Encryption/Decryption with shift value of your choice ! ')
+    choice = input('Insert Here : ')
+    if choice.isdigit():
+        if choice == '0':
+            sen = input('Insert the plaintext : ')
+            key = int(input('Insert shift value(Only integer values) : '))
+            print(50 * '-')
+            print(f'Your ciphertext ---> {Encryption(sen, key)}')
+            print(50 * '-')
+            con = input('Continue ? [Any Key/no]')
+            if con == 'no':
+                print('Exiting..')
+                break
+            else:
+                pass
