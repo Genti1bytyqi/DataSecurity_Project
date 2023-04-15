@@ -1,8 +1,7 @@
-# Ceaser Cipher without of numbers and special char encryption
+# Ceaser Algorithm
 
-
-Blowfish-Cipher is a theme for project in Data Security with symmetric-key block cipher , 
-as an encryption technique!
+implementation of SymemetricAlgorithm for encryption and decryption of Caesar's code.
+Bytes that are not Letters A-Z or a-z should not be changed!
 
 Contributors:
 Gentrit Bytyçi,
