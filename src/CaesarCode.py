@@ -46,3 +46,22 @@ def Decryption(ciphertext, key_val):
                 break #breaks out of the infinite loop and ends the program. If the user chose to continue, the loop continues to display the menu and prompt the user for their choice.
             else:
                 pass
+        elif choice == '1': 
+            csen = input('Insert the ciphertext : ') 
+            key = int(input('Insert shift value(Only integer values) : '))
+            print(50 * '-')
+            print(f'Your plaintext ---> {Decryption(csen, key)}') #Calling the function for decryption
+            print(50 * '-')
+            con = input('Shall we continue ? [Any Key/no]') #Continue or exit 
+            if con == 'no':
+                print('Exiting..')
+                break
+            else:
+                pass
+        elif choice == '2':  #Exiting without encrypting or decrypting
+            print('Exiting..')
+            break
+        else:
+            print('Exception error .. \n'
+                  'Please insert 2 to exit ') #A nonvalid choice
+          
