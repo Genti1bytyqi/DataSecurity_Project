@@ -31,21 +31,22 @@ def Decryption(ciphertext, key_val):
 
     return plaintext
 
- while True:
+ while True:  #starts the infinite loop that continues until the user chooses to exit the program
     print(
-        'Welcome \n [] Press 0 for Encryption \n [] Press 1 for Decryption \n [*] Press 2 to exit.. ')
-    print('Encryption/Decryption with shift value of your choice ! ')
-    choice = input('Insert Here : ')
-    if choice.isdigit():
+        'Welcome \n [] Press 0 for Encryption \n [] Press 1 for Decryption \n [*] Press 2 to exit.. ') #displays a welcome message and the menu with three options
+    print('Encryption/Decryption with shift value of your choice ! ')                               #displays a message to guide the user on how to use the program.
+    choice = input('Insert Here : ')                                                   #prompts the user to enter their choice and stores it in the choice variable.
+    if choice.isdigit():                                                               #checks if the user input is a digit.
         if choice == '0':
-            sen = input('Insert the plaintext : ')
-            key = int(input('Insert shift value(Only integer values) : '))
-            print(50 * '-')
-            print(f'Your ciphertext ---> {Encryption(sen, key)}')
-            print(50 * '-')
-            con = input('Continue ? [Any Key/no]')
+            sen = input('Insert the plaintext : ')                                 #prompts the user to enter the plaintext that they want to encrypt.
+            key = int(input('Insert shift value(Only integer values) : '))         #prompts the user to enter the shift value they want to use for the encryption.
+                                                                                   #The input is converted to an integer and stored in the key variable.
+            print(50 * '-')                                                        #prints a line of 50 dashes(-) to separate the output for better readability.
+            print(f'Your ciphertext ---> {Encryption(sen, key)}') #calls the Encryption function with the sen plaintext and key shift value,and prints the resulting ciphertext.
+            print(50 * '-')                                       #prints another line of 50 dashes to separate the output.
+            con = input('Continue ? [Any Key/no]')                #prompts the user to continue or exit the program.
             if con == 'no':
-                print('Exiting..')
-                break
+                print('Exiting..')                                #prints a message to indicate that the program is exiting.
+                break #breaks out of the infinite loop and ends the program. If the user chose to continue, the loop continues to display the menu and prompt the user for their choice.
             else:
                 pass
