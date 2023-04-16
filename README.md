@@ -1,4 +1,4 @@
-# Ceaser Algorithm
+# Caeser Algorithm
 
 implementation of SymemetricAlgorithm for encryption and decryption of Caesar's code.
 Bytes that are not Letters A-Z or a-z should not be changed!
