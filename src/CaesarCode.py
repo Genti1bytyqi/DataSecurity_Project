@@ -63,5 +63,5 @@ def Decryption(ciphertext, key_val):
             break
         else:
             print('Exception error .. \n'
-                  'Please insert 2 to exit ') #A nonvalid choice
+                  'Please insert 0, 1 or 2') #A nonvalid choice
           
